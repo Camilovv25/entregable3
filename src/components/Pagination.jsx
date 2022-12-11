@@ -15,13 +15,12 @@ const Pagination = ({ totalCards, cardsPerPage, paginate, currentPage, setCurren
         }
     }
 
-    let pageLinks = pagesNumbers.map(pageNumber => <li className={`page_number ${markNumberPage(pageNumber)}`} key={pageNumber} onClick={() => paginate(pageNumber)}><a href="!#">{pageNumber}</a></li>)
+    let pageLinks = pagesNumbers.map(pageNumber => <li className={`page_number ${markNumberPage(pageNumber)}`} key={pageNumber} onClick={() => paginate(pageNumber)}><a href="#">{pageNumber}</a></li>)
     return (
         <nav className='pages-nav'>
             <ul className='pages-nav_list'>
                 {
                     (firstLinkIndex >= 1) && <li onClick={() => {
-
                         setFirstLinkIndex(firstLinkIndex - 3)
                         setLastLinkIndex(lastLinkIndex - 3)
                     }}><i className='bx bx-chevrons-left'></i></li>
@@ -29,7 +28,6 @@ const Pagination = ({ totalCards, cardsPerPage, paginate, currentPage, setCurren
                 {pageLinks.slice(firstLinkIndex, lastLinkIndex)}
                 {
                     (lastLinkIndex <= pagesNumbers.length) && <li onClick={() => {
-
                         setFirstLinkIndex(firstLinkIndex + 3)
                         setLastLinkIndex(lastLinkIndex + 3)
                     }}><i className='bx bx-chevrons-right' ></i></li>
