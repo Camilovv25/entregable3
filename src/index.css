@@ -1,0 +1,265 @@
+body {
+    background-color: #05292E;
+}
+
+span {
+    text-transform: uppercase;
+    color: #7E7E7E;
+    font-size: 0.9rem;
+}
+
+.App-header {
+    background-image: url('https://pousta.com/wp-content/uploads/2020/05/PORTADARICKMORTY.png');
+    background-attachment: scroll;
+    background-size: cover;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.App-header>img {
+    width: 30%;
+}
+
+
+.App {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+/*Search*/
+.search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.search-bar {
+    padding: 5px 10px;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.form>div>button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/*location filter*/
+.filter_options {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    background-color: #062226;
+    color: #FBFBFB;
+    z-index: 2;
+    position: absolute;
+    min-width: 200px;
+    max-width: 275px
+}
+
+.filter-item:hover {
+    background-color: #05292E;
+    box-shadow: 0px 0px 10px #4AB648;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.filter-item {
+    padding: 5px;
+    width: auto;
+}
+
+/*location Info*/
+.location-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #062226;
+    margin: 20px 0px;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 5px #4AB648;
+    border-radius: 20px;
+}
+
+.location-card_title {
+    color: #1acf14;
+    text-transform: capitalize;
+    font-size: 30px;
+    text-shadow: 1px 1px 20px #4AB648;
+    text-align: center;
+}
+
+.location-card_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding: 0;
+    font-size: 25px;
+    flex-wrap: wrap;
+    text-align: center
+}
+
+.location-card_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+/*------resident list---------*/
+.residents-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/*------resident info-------*/
+.resident-card {
+    background-color: #062226;
+    color: #FBFBFB;
+}
+
+.resident-card:hover {
+    box-shadow: 0 0 5px #1acf14;
+    transform: scale(1.05);
+}
+
+.resident-card_header {
+    position: relative;
+}
+
+
+
+.resident-card_status {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border-end-end-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #062226;
+}
+
+.circle {
+    width: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.circle.Alive {
+    background-color: #4AB648;
+}
+
+.circle.Dead {
+    background-color: #B94343;
+}
+
+.circle.unknown {
+    background-color: #938686;
+}
+
+.resident-card_body {
+    padding: 15px;
+}
+
+.resident-card_body>ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.resident-card_body>ul>li {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* .resident-card_body>ul>li>span {
+    color: #7E7E7E;
+} */
+
+
+/*Pagination*/
+.pages-nav {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.pages-nav_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pages-nav_list a {
+    text-decoration: none;
+    color: white
+}
+
+.pages-nav_list>li {
+    margin: 0;
+    padding: 8px;
+    /* background-color: #062226; */
+    color: #FBFBFB;
+}
+
+.page_selected {
+
+    border-radius: 8px;
+    box-shadow: 0 0 5px #1acf14;
+    /* background-color: #4AB648; */
+    transform: scale(1.2);
+}
+
+.bx-chevrons-right,
+.bx-chevrons-left {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.error {
+    background-color: #f41b1b;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: #FBFBFB;
+    text-align: center;
+    padding: 2px 1px;
+    font-size: 20px;
+}
