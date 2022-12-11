@@ -21,8 +21,13 @@ function App() {
   const firstCardIndex = lastCardIndex - cardsPerPage
   const currentCards = location?.residents.slice(firstCardIndex, lastCardIndex)
 
+  /*----variables-------*/
+  const URL_by_number = 'https://rickandmortyapi.com/api/location/'
+  const URL_by_name = 'https://rickandmortyapi.com/api/location?name='
+
   /*------Funciones------ */
   const getDataDimension = (idDimension) => {
+
     if (idDimension) {
       const URL = `https://rickandmortyapi.com/api/location/${idDimension}`
       axios.get(URL)
@@ -43,6 +48,7 @@ function App() {
     event.preventDefault()
     const dimensionSearch = event.target.search.value
     getDataDimension(dimensionSearch)
+
     setLocationName('')
   }
   const handleChangeInput = (event) => {
@@ -61,6 +67,8 @@ function App() {
   useEffect(() => {
     const randomDimension = getRandomNumber(126)
     getDataDimension(randomDimension)
+
+
   }, [])
 
   return (
@@ -71,7 +79,7 @@ function App() {
           <form className='form' onSubmit={handleSubmit}>
             <div>
               <input className='search-bar' id='search' type="text" value={locationName} onChange={handleChangeInput} placeholder='Search a dimension' />
-              <button onClick={() => setCurrentPage(1)} type='submit'>Search</button>
+
               {
                 showError ? <ErrorMessage /> : ""
               }
