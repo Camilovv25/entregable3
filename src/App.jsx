@@ -77,7 +77,7 @@ function App() {
         <img src="https://assets.stickpng.com/images/58f37720a4fa116215a9240f.png" alt="" />
         <section className='search-box'>
           <form className='form' onSubmit={handleSubmit}>
-            <div>
+            <div className='search-container'>
               <input className='search-bar' id='search' type="text" value={locationName} onChange={handleChangeInput} placeholder='Search a dimension' />
 
               {
